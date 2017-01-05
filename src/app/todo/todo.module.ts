@@ -3,6 +3,7 @@ import { TodoComponent } from './todo.component';
 import { TodoRoutingModule } from './todo-routing.module';
 import {TodoService} from '../_shared/_services/todo.service';
 import { SharedModule }   from '../_shared/shared.module';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { SharedModule }   from '../_shared/shared.module';
   ],
   imports: [
       SharedModule,
-      TodoRoutingModule
+      TodoRoutingModule,
+      NgbModule
   ],
   providers:[
     TodoService
