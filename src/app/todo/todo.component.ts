@@ -18,6 +18,7 @@ export class TodoComponent implements OnInit {
 
   private addTodoForm: FormGroup;
   private name = new FormControl("", Validators.required);
+  private cpf = new FormControl("");
 
   private infoMsg = { body: "", type: "info" };
 
@@ -29,7 +30,8 @@ export class TodoComponent implements OnInit {
     this.getTodos();
 
     this.addTodoForm = this.formBuilder.group({
-      name: this.name
+      name: this.name,
+      cpf: this.cpf
     });
 
   }

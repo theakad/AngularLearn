@@ -1,14 +1,16 @@
 <div class="card">
-  <h4 class="card-header">Adicionar todo</h4>
+  <h4 class="card-header">Adicionar Pessoa</h4>
   <div class="card-block">
     <div class="container">
       <form [formGroup]="addTodoForm" (ngSubmit)="addTodo()">
         <div class="form-group">
-          <label for="name">Name</label>
+          <label for="name">Nome</label>
           <input class="form-control" placeholder="Nome" name="name" formControlName="name" type="text" />
+          <label for="cpf">CPF</label>
+          <input class="form-control" placeholder="Apenas números" name="cpf" formControlName="cpf" type="text" />
         </div>
         <div class="form-group">
-          <button type="submit" name="submit" [disabled]="!addTodoForm.valid" class="btn">OK</button>
+          <button type="submit" name="submit" [disabled]="!addTodoForm.valid" class="btn">Salvar</button>
         </div>
       </form>
     </div>
@@ -39,9 +41,6 @@
             <button class="btn btn-sm btn-danger" (click)="deleteTodo(todo)">
                 <i class="fa fa-trash"></i> Deletar
             </button>
-            <!--<button class="btn btn-sm btn-success" [routerLink]="['/horarios', {todoId: todo.id}]">
-                <i class="fa fa-info"></i> Adicionar Visita
-            </button>-->
           </td>
         </tr>
       </tbody>
